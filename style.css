@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Green500: hsl(158, 36%, 37%);
+  --Green700: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+  --heading-font: "Fraunces", serif;
+  --paragraph-font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  color: var(--Grey);
+  background-color: var(--Cream);
+  font-size: 0.9em;
+  font-weight: 500;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.card {
+  background-color: var(--White);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  border-radius: 10px;
+  padding-bottom: 1.5em;
+  overflow: hidden;
+}
+
+.image {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+
+.product-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0 1.5em;
+}
+.product-category {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.product-name {
+  font-family: var(--heading-font);
+  color: var(--Black);
+  line-height: 100%;
+  font-size: 2.3em;
+  font-weight: 700;
+}
+.product-description {
+  line-height: 1.5em;
+}
+
+.product-price {
+  margin-top: 0.1em;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+.current-price {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 2.2em;
+  color: var(--Green500);
+}
+.old-price {
+  text-decoration: line-through;
+}
+
+.add-cart {
+  background-color: var(--Green500);
+  padding: 1.2em;
+  border-radius: 7px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.add-cart-text {
+  color: var(--White);
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.add-cart:hover {
+  background-color: var(--Green700);
+  cursor: pointer;
+}
+
+.attribution {
+  margin: 1.5em 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 600px;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+  }
+  .product-img {
+    width: 50%;
+  }
+  .product-infos {
+    width: 50%;
+    justify-content: center;
+    gap: 1.8em;
+    padding: 2em;
+  }
+}
